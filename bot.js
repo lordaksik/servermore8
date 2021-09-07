@@ -81,7 +81,7 @@ bot.hears('/bot', async (ctx) => {
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade == 3) {
-       sendMessageByBot(messageChatId, "6 карт больше 8");
+      ctx.reply( "6 карт больше 8");
        // пауза 5 минут если это 
    }
 
@@ -95,7 +95,7 @@ bot.hears('/bot', async (ctx) => {
    trade5 = global.games5;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade2 == 3) {
-       sendMessageByBot(messageChatId, "6 карт меньше 8");
+      ctx.reply("6 карт меньше 8");
    }
 
 }
@@ -107,7 +107,7 @@ bot.hears('/bot', async (ctx) => {
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade3 == 6) {
-       sendMessageByBot(messageChatId, "6 карт игрока меньше 8");
+      ctx.reply( "6 карт игрока меньше 8");
    }
 
 }
@@ -119,7 +119,7 @@ function reskef4() {
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade4 == 6) {
-       sendMessageByBot(messageChatId, "6 карт игрока больше 8");
+      ctx.reply("6 карт игрока больше 8");
    }
 }
   function reskef5() {
@@ -127,7 +127,7 @@ function reskef4() {
    trade5 = global.games5;
 
    if (trade5 == 0) {
-       sendMessageByBot(messageChatId, "15 раздач не было 8");
+      ctx.reply("15 раздач не было 8");
    }
 
 }
@@ -136,7 +136,7 @@ function reskef4() {
    trade6 = global.games6;
 
    if (trade6 == 0) {
-       sendMessageByBot(messageChatId, "10 карт не было картинки");
+      ctx.reply( "10 карт не было картинки");
    }
 
 }   
@@ -146,7 +146,7 @@ function reskef4() {
       
        ctx.reply( "Вы запустили Бота на стратегию «Ниже/Выше 8» ⚠ Не забудьте поставить особые уведомления на Бота, и ждите сигнала на валуйные ситуации!");
        ctx.reply( "Удачи! По всем вопросам пишите @BetgamesTV_Admin");
-       setTimeout(reskef, 1000)
+     
        global.time= setInterval(reskef, 30000)
        global.time2= setInterval(reskef2, 30000)
        global.time3= setInterval(reskef3, 30000)
