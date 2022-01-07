@@ -136,7 +136,7 @@ function reskef4() {
    trade6 = global.games6;
 
    if (trade6 == 0) {
-      ctx.reply( "10 карт не было картинки");
+      ctx.reply( "10 карт не было J Q K туз");
    }
 
 }   
