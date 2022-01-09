@@ -17,7 +17,7 @@ bot.hears('/bot', async (ctx) => {
       let result6 = 0;
       score_dealer = data.items.results[0].results.score_dealer
   
-      for (let i = 0; i <= 2; i++) {
+      for (let i = 0; i <= 3; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -26,7 +26,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games = result;
-      for (let i = 0; i <= 2; i++) {
+      for (let i = 0; i <= 3; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -54,7 +54,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games4 = result4;
-      for (let i = 0; i <= 19; i++) {
+      for (let i = 0; i <= 14; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
   
@@ -63,7 +63,7 @@ bot.hears('/bot', async (ctx) => {
               result5 = result5 + 1;
       }
       global.games5 = result5;
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 12; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
   
@@ -81,7 +81,7 @@ bot.hears('/bot', async (ctx) => {
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade == 3) {
-      ctx.reply( "6 карт больше 8");
+      ctx.reply( "8 карт больше 8");
        // пауза 5 минут если это 
    }
 
@@ -95,7 +95,7 @@ bot.hears('/bot', async (ctx) => {
    trade5 = global.games5;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade2 == 3) {
-      ctx.reply("6 карт меньше 8");
+      ctx.reply("8 карт меньше 8");
    }
 
 }
@@ -107,7 +107,7 @@ bot.hears('/bot', async (ctx) => {
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade3 == 6) {
-      ctx.reply( "6 карт игрока меньше 8");
+      ctx.reply( "10 карт игрока меньше 8");
    }
 
 }
@@ -119,7 +119,7 @@ function reskef4() {
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade4 == 6) {
-      ctx.reply("6 карт игрока больше 8");
+      ctx.reply("10 карт игрока больше 8");
    }
 }
   function reskef5() {
@@ -136,7 +136,7 @@ function reskef4() {
    trade6 = global.games6;
 
    if (trade6 == 0) {
-      ctx.reply( "10 карт не было J Q K туз");
+      ctx.reply( "12 карт не было J Q K туз");
    }
 
 }   
