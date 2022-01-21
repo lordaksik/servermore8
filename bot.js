@@ -15,6 +15,8 @@ bot.hears('/bot', async (ctx) => {
       let result4 = 0;
       let result5 = 0;
       let result6 = 0;
+      let result7 = 0;
+      let result8 = 0;
       score_dealer = data.items.results[0].results.score_dealer
   
       for (let i = 0; i <= 3; i++) {
@@ -35,7 +37,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games2 = result2;
-      for (let i = 0; i <= 5; i++) {
+      for (let i = 0; i <= 9; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -45,15 +47,32 @@ bot.hears('/bot', async (ctx) => {
   
       global.games3 = result3;
   
-      for (let i = 0; i <= 5; i++) {
+      for (let i = 0; i <= 9; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
           if (score_player > 8)
               result4 = result4 + 1;
       }
+       for (let i = 0; i <= 9; i++) {
+          score_dealer = data.items.results[i].results.score_dealer
+          score_player = data.items.results[i].results.score_player
+          // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
+          if (score_dealer < 8)
+              result7 = result7 + 1;
+      }
   
-      global.games4 = result4;
+      global.games7 = result7;
+  
+      for (let i = 0; i <= 9; i++) {
+          score_dealer = data.items.results[i].results.score_dealer
+          score_player = data.items.results[i].results.score_player
+          // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
+          if (score_dealer > 8)
+              result8 = result8 + 1;
+      }
+  
+      global.games8 = result8;
       for (let i = 0; i <= 14; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
@@ -106,7 +125,7 @@ bot.hears('/bot', async (ctx) => {
    trade3 = global.games3;
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
-   if (trade3 == 6) {
+   if (trade3 == 10) {
       ctx.reply( "10 карт игрока меньше 8");
    }
 
@@ -118,7 +137,7 @@ function reskef4() {
    trade3 = global.games3;
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
-   if (trade4 == 6) {
+   if (trade4 == 10) {
       ctx.reply("10 карт игрока больше 8");
    }
 }
@@ -138,9 +157,31 @@ function reskef4() {
    if (trade6 == 0) {
       ctx.reply( "12 карт не было J Q K туз");
    }
-
 }   
-
+function reskef7() {
+   request()
+   trade = global.games;
+   trade2 = global.games2;
+   trade3 = global.games3;
+   trade4 = global.games4;
+   trade7 = global.games7;
+   console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
+   if (trade7 == 10) {
+      ctx.reply("10 карт дилера меньше 8");
+   }
+}
+   function reskef8() {
+   request()
+   trade = global.games;
+   trade2 = global.games2;
+   trade3 = global.games3;
+   trade4 = global.games4;
+   trade8 = global.games8;
+   console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
+   if (trade8 == 10) {
+      ctx.reply("10 карт дилера больше 8");
+   }
+}
   
     function good(){
       
@@ -153,6 +194,8 @@ function reskef4() {
        global.time4= setInterval(reskef4, 30000)
        global.time5= setInterval(reskef5, 120000)
        global.time6= setInterval(reskef6, 30000)
+       global.time6= setInterval(reskef7, 30000)
+       global.time6= setInterval(reskef8, 30000)
        }
 
 
