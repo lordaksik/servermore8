@@ -194,8 +194,8 @@ function reskef7() {
        global.time4= setInterval(reskef4, 30000)
        global.time5= setInterval(reskef5, 120000)
        global.time6= setInterval(reskef6, 30000)
-       global.time6= setInterval(reskef7, 30000)
-       global.time6= setInterval(reskef8, 30000)
+       global.time7= setInterval(reskef7, 30000)
+       global.time8= setInterval(reskef8, 30000)
        }
 
 
@@ -210,7 +210,8 @@ bot.hears('/end', async (ctx) => {
       clearInterval(time4);
       clearInterval(time5);
       clearInterval(time6);
-  
+  clearInterval(time7);
+      clearInterval(time8);
       ctx.reply("Пока");  
     } catch(err) {
       ctx.reply("Этот бот и так выключен");    
