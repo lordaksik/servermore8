@@ -19,7 +19,7 @@ bot.hears('/bot', async (ctx) => {
       let result8 = 0;
       score_dealer = data.items.results[0].results.score_dealer
   
-      for (let i = 0; i <= 3; i++) {
+      for (let i = 0; i <= 4; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -28,7 +28,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games = result;
-      for (let i = 0; i <= 3; i++) {
+      for (let i = 0; i <= 4; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -99,8 +99,8 @@ bot.hears('/bot', async (ctx) => {
    trade3 = global.games3;
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
-   if (trade == 3) {
-      ctx.reply( "8 карт больше 8");
+   if (trade == 5) {
+      ctx.reply( "10 карт больше 8");
        // пауза 5 минут если это 
    }
 
@@ -113,8 +113,8 @@ bot.hears('/bot', async (ctx) => {
    trade4 = global.games4;
    trade5 = global.games5;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
-   if (trade2 == 3) {
-      ctx.reply("8 карт меньше 8");
+   if (trade2 == 5) {
+      ctx.reply("10 карт меньше 8");
    }
 
 }
