@@ -19,7 +19,7 @@ bot.hears('/bot', async (ctx) => {
       let result8 = 0;
       score_dealer = data.items.results[0].results.score_dealer
   
-      for (let i = 0; i <= 4; i++) {
+      for (let i = 0; i <= 9; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -28,7 +28,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games = result;
-      for (let i = 0; i <= 4; i++) {
+      for (let i = 0; i <= 9; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -82,7 +82,7 @@ bot.hears('/bot', async (ctx) => {
               result5 = result5 + 1;
       }
       global.games5 = result5;
-      for (let i = 0; i < 12; i++) {
+      for (let i = 0; i < 9; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
   
@@ -99,7 +99,7 @@ bot.hears('/bot', async (ctx) => {
    trade3 = global.games3;
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
-   if (trade == 5) {
+   if (trade == 10) {
       ctx.reply( "10 карт больше 8");
        // пауза 5 минут если это 
    }
@@ -113,8 +113,8 @@ bot.hears('/bot', async (ctx) => {
    trade4 = global.games4;
    trade5 = global.games5;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
-   if (trade2 == 5) {
-      ctx.reply("10 карт меньше 8");
+   if (trade2 == 10) {
+      ctx.reply(" 10 карт меньше 8");
    }
 
 }
@@ -126,7 +126,7 @@ bot.hears('/bot', async (ctx) => {
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade3 == 10) {
-      ctx.reply( "10 карт игрока меньше 8");
+      ctx.reply( "Вертикаль 10 карт игрока меньше 8");
    }
 
 }
@@ -138,7 +138,7 @@ function reskef4() {
    trade4 = global.games4;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade4 == 10) {
-      ctx.reply("10 карт игрока больше 8");
+      ctx.reply("Вертикаль 10 карт игрока больше 8");
    }
 }
   function reskef5() {
@@ -155,7 +155,7 @@ function reskef4() {
    trade6 = global.games6;
 
    if (trade6 == 0) {
-      ctx.reply( "12 карт не было J Q K туз");
+      ctx.reply( "8 карт не было J Q K туз");
    }
 }   
 function reskef7() {
@@ -167,7 +167,7 @@ function reskef7() {
    trade7 = global.games7;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade7 == 10) {
-      ctx.reply("10 карт дилера меньше 8");
+      ctx.reply("Вертикаль 10 карт дилера меньше 8");
    }
 }
    function reskef8() {
@@ -179,7 +179,7 @@ function reskef7() {
    trade8 = global.games8;
    console.log(trade + ' ' + trade2 + ' ' + trade3 + ' ' + trade4);
    if (trade8 == 10) {
-      ctx.reply("10 карт дилера больше 8");
+      ctx.reply("Вертикаль 10 карт дилера больше 8");
    }
 }
   
