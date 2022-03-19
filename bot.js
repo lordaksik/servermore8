@@ -19,7 +19,7 @@ bot.hears('/bot', async (ctx) => {
       let result8 = 0;
       score_dealer = data.items.results[0].results.score_dealer
   
-      for (let i = 0; i <= 9; i++) {
+      for (let i = 0; i <= 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -28,7 +28,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games = result;
-      for (let i = 0; i <= 9; i++) {
+      for (let i = 0; i <= 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -37,7 +37,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games2 = result2;
-      for (let i = 0; i <= 9; i++) {
+      for (let i = 0; i <= 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -47,14 +47,14 @@ bot.hears('/bot', async (ctx) => {
   
       global.games3 = result3;
   
-      for (let i = 0; i <= 9; i++) {
+      for (let i = 0; i <= 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
           if (score_player > 8)
               result4 = result4 + 1;
       }
-       for (let i = 0; i <= 9; i++) {
+       for (let i = 0; i <= 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -64,7 +64,7 @@ bot.hears('/bot', async (ctx) => {
   
       global.games7 = result7;
   
-      for (let i = 0; i <= 9; i++) {
+      for (let i = 0; i <= 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -73,7 +73,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games8 = result8;
-      for (let i = 0; i <= 14; i++) {
+      for (let i = 0; i <= 5; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
   
@@ -82,7 +82,7 @@ bot.hears('/bot', async (ctx) => {
               result5 = result5 + 1;
       }
       global.games5 = result5;
-      for (let i = 0; i < 9; i++) {
+      for (let i = 0; i < 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
   
