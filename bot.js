@@ -19,7 +19,7 @@ bot.hears('/bot', async (ctx) => {
       let result8 = 0;
       score_dealer = data.items.results[0].results.score_dealer
   
-      for (let i = 0; i <= 3; i++) {
+      for (let i = 0; i <= 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -28,7 +28,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games = result;
-      for (let i = 0; i <= 3; i++) {
+      for (let i = 0; i <= 2; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -37,7 +37,7 @@ bot.hears('/bot', async (ctx) => {
       }
   
       global.games2 = result2;
-      for (let i = 0; i <= 7; i++) {
+      for (let i = 0; i <= 6; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -47,7 +47,7 @@ bot.hears('/bot', async (ctx) => {
   
       global.games3 = result3;
   
-      for (let i = 0; i <= 7; i++) {
+      for (let i = 0; i <= 6; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -55,7 +55,7 @@ bot.hears('/bot', async (ctx) => {
               result4 = result4 + 1;
       }
       global.games4 = result4;
-       for (let i = 0; i <= 7; i++) {
+       for (let i = 0; i <= 6; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -65,7 +65,7 @@ bot.hears('/bot', async (ctx) => {
   
       global.games7 = result7;
   
-      for (let i = 0; i <= 7; i++) {
+      for (let i = 0; i <= 6; i++) {
           score_dealer = data.items.results[i].results.score_dealer
           score_player = data.items.results[i].results.score_player
           // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
@@ -93,8 +93,8 @@ bot.hears('/bot', async (ctx) => {
    trade3 = global.games3;
    trade4 = global.games4;
    console.log(trade);
-   if (trade == 4) {
-      ctx.reply( "8 карт больше 8");
+   if (trade == 3) {
+      ctx.reply( "6 карт больше 8");
        // пауза 5 минут если это 
    }
 
@@ -107,8 +107,8 @@ bot.hears('/bot', async (ctx) => {
    trade4 = global.games4;
    trade5 = global.games5;
    console.log(trade2);
-   if (trade2 == 4) {
-      ctx.reply(" 8 карт меньше 8");
+   if (trade2 == 3) {
+      ctx.reply(" 6 карт меньше 8");
    }
 
 }
@@ -119,8 +119,8 @@ bot.hears('/bot', async (ctx) => {
    trade3 = global.games3;
    trade4 = global.games4;
    console.log(trade3);
-   if (trade3 == 8) {
-      ctx.reply( "Вертикаль 8 карт игрока меньше 8");
+   if (trade3 == 7) {
+      ctx.reply( "Вертикаль 7 карт игрока меньше 8");
    }
 
 }
@@ -131,8 +131,8 @@ function reskef4() {
    trade3 = global.games3;
    trade4 = global.games4;
    console.log(trade4);
-   if (trade4 == 8) {
-      ctx.reply("Вертикаль 8 карт игрока больше 8");
+   if (trade4 == 7) {
+      ctx.reply("Вертикаль 7 карт игрока больше 8");
    }
 }
   function reskef5() {
@@ -153,8 +153,8 @@ function reskef7() {
    trade4 = global.games4;
    trade7 = global.games7;
    console.log(trade7);
-   if (trade7 == 8) {
-      ctx.reply("Вертикаль 8 карт дилера меньше 8");
+   if (trade7 == 7) {
+      ctx.reply("Вертикаль 7 карт дилера меньше 8");
    }
 }
    function reskef8() {
@@ -165,8 +165,8 @@ function reskef7() {
    trade4 = global.games4;
    trade8 = global.games8;
    console.log(trade8);
-   if (trade8 == 8) {
-      ctx.reply("Вертикаль 8 карт дилера больше 8");
+   if (trade8 == 7) {
+      ctx.reply("Вертикаль 7 карт дилера больше 8");
    }
 }
   
