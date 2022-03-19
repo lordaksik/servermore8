@@ -131,7 +131,7 @@ function reskef4() {
    trade3 = global.games3;
    trade4 = global.games4;
    console.log(trade4);
-   if (trade4 == 4) {
+   if (trade4 == 8) {
       ctx.reply("Вертикаль 8 карт игрока больше 8");
    }
 }
