@@ -17,6 +17,7 @@ bot.hears('/bot', async (ctx) => {
       let result6 = 0;
       let result7 = 0;
       let result8 = 0;
+      let result9 = 0;
       score_dealer = data.items.results[0].results.score_dealer
   
       for (let i = 0; i <= 5; i++) {
@@ -83,7 +84,16 @@ bot.hears('/bot', async (ctx) => {
               result5 = result5 + 1;
       }
       global.games5 = result5;
-     
+     for (let i = 0; i <= 13; i++) {
+  score_dealer = data.items.results[i].results.score_dealer
+  score_player = data.items.results[i].results.score_player
+
+  if ((parseInt(score_player,10) === 11) || (parseInt(score_dealer,10) ===11) || (parseInt(score_player,10) ===12) || (parseInt(score_dealer,10) ===12) ||
+(parseInt(score_player,10) ===13) || (parseInt(score_dealer,10) ===13))
+      { result9 = result9 + 1;}
+}  
+          global.games9 = result9;
+
   
   }
   function reskef() {
@@ -167,6 +177,14 @@ function reskef7() {
    console.log(trade8);
    if (trade8 == 12) {
       ctx.reply("Вертикаль 12 карт дилера больше 8");
+   }
+}
+    function reskef9() {
+   request()
+   trade9 = global.games9;
+   console.log(trade9);
+   if (trade9 == 0) {
+      ctx.reply("Фигурок не было 14 раздач");
    }
 }
   
